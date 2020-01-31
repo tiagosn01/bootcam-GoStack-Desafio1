@@ -55,7 +55,7 @@ server.put('/projects/:id', logRequests, checkUsuario, (req, res) =>{
 
 server.delete('/projects/:id', logRequests, checkUsuario, (req, res) => {
   const { id } = req.params
-  const projectIndex = projects.find(p => p.id == id);
+  const projectIndex = projects.findIndex(p => p.id == id);
 
   projects.splice(projectIndex, 1);
 
